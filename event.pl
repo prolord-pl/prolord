@@ -7,7 +7,7 @@
 :- use_module(library(clpfd)).
 
 
-:- use_module(prolapse(util)).
+:- use_module(prolord(util)).
 
 integer_time(IT) :-
   get_time(FT),
@@ -20,7 +20,7 @@ run_listeners(Msg) :-
   forall(
     (
       Listener = listener(LT, msg(Msg.t, MsgId), Msg),
-      listening(prolapse, Listener, _),
+      listening(prolord, Listener, _),
       broadcast_request(Listener),
       dbg(event, "Running listener listener(~w, ~w, ~w)", [LT, Msg.t, MsgId])
     ),
@@ -48,7 +48,7 @@ on_event(LT, MsgType, MsgId, Handler) :-
   Listener = listener(LT, msg(MsgType, MsgId), Msg),
   dbg(event, "Adding listener ~w", [Listener]),
   listen(
-    prolapse,
+    prolord,
     Listener,
     (
       call(Handler, Msg)

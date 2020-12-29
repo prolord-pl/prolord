@@ -3,8 +3,8 @@
      [plugin/2]
    ).
 
-:- use_module(prolapse(config)).
-:- use_module(prolapse(util), [dbg/2, dbg/3]).
+:- use_module(prolord(config)).
+:- use_module(prolord(util), [dbg/2, dbg/3]).
 
 
 :- use_module(library(http/json)).

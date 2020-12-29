@@ -3,8 +3,8 @@
      [plugin/2]
    ).
 
-:- use_module(prolapse(http_lib), [register_slash_command/2]).
-:- use_module(prolapse(util)).
+:- use_module(prolord(http_lib), [register_slash_command/2]).
+:- use_module(prolord(util)).
 :- use_module(library(http/json)).
 
 

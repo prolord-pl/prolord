@@ -6,9 +6,9 @@
 :- use_module(library(sandbox)).
 
 
-:- use_module(prolapse(http_lib)).
-:- use_module(prolapse(util)).
-:- use_module(prolapse(db)).
+:- use_module(prolord(http_lib)).
+:- use_module(prolord(util)).
+:- use_module(prolord(db)).
 
 
 % safe_goal(_) :- fail.

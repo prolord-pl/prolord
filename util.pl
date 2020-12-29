@@ -29,7 +29,7 @@
 dbg(Topic, Format) :-
     dbg(Topic, Format, []).
 dbg(Topic, Format, Args) :-
-    debug(prolapse(Topic), Format, Args).
+    debug(prolord(Topic), Format, Args).
 
 words(S, W) :- split_string(S, " ", "", W).
 unwords(W, S) :-

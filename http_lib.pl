@@ -18,8 +18,8 @@
 :- use_module(library(http/http_json)).
 :- use_module(library(http/json_convert)).
 
-:- use_module(prolapse(config), [get_config/2]).
-:- use_module(prolapse(util), [dbg/2, dbg/3]).
+:- use_module(prolord(config), [get_config/2]).
+:- use_module(prolord(util), [dbg/2, dbg/3]).
 
 
 ua(Ua) :- Ua = "Prolord v0.1".

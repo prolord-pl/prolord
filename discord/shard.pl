@@ -8,12 +8,12 @@
 :- use_module(library(http/json_convert)).
 :- use_module(library(debug)).
 
-:- use_module(prolapse(http_lib)).
-:- use_module(prolapse(discord/shard)).
-:- use_module(prolapse(discord/opcodes), [gateway_op/2]).
-:- use_module(prolapse(plugins), [run_plugins/1]).
-:- use_module(prolapse(util)).
-:- use_module(prolapse(event)).
+:- use_module(prolord(http_lib)).
+:- use_module(prolord(discord/shard)).
+:- use_module(prolord(discord/opcodes), [gateway_op/2]).
+:- use_module(prolord(plugins), [run_plugins/1]).
+:- use_module(prolord(util)).
+:- use_module(prolord(event)).
 
 
 
@@ -59,8 +59,8 @@ shard(WSS, [ShardId, ShardNum], Callback) :-
     Object = json{ op: Op
                  , d: json{ token: Token
                           , properties: json{ '$os': "linux"
-                                            , '$browser': "Prolapse 0.1"
-                                            , '$device':  "Prolapse 0.1" }
+                                            , '$browser': "Prolord 0.1"
+                                            , '$device':  "Prolord 0.1" }
                           , shard: [ShardId, ShardNum] }},
     ws_send(Socket, json(Object)),
     shard_loop(Socket, ShardId, Callback),

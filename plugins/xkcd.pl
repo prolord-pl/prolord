@@ -5,7 +5,7 @@
 
 :- use_module(library(http/http_client)).
 
-:- use_module(prolapse(http_lib)).
+:- use_module(prolord(http_lib)).
 
 plugin(prefix("xkcd"), xkcd:handler).
 

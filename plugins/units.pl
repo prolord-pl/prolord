@@ -3,7 +3,7 @@
      [plugin/2]
    ).
 
-:- use_module(prolapse(util)).
+:- use_module(prolord(util)).
 :- use_module(unit_db).
 
 

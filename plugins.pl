@@ -8,8 +8,8 @@
      ]
    ).
 
-:- use_module(prolapse(http_lib)).
-:- use_module(prolapse(util)).
+:- use_module(prolord(http_lib)).
+:- use_module(prolord(util)).
 
 % TODO: refactor to new file and improve
 plugin_type(raw(_)).

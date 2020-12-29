@@ -6,9 +6,9 @@
 
 :- use_module(library(http/json)).
 
-:- use_module(prolapse(plugins), [load_bot_plugins]).
-:- use_module(prolapse(event)).
-:- use_module(prolapse(util)).
+:- use_module(prolord(plugins), [load_bot_plugins]).
+:- use_module(prolord(event)).
+:- use_module(prolord(util)).
 
 
 
@@ -32,7 +32,7 @@ dump_listeners(Msg) :-
     with_output_to(
       string(X),
       forall(
-        listening(prolapse, X, Y),
+        listening(prolord, X, Y),
         (
           write(X),
           write(" - "),

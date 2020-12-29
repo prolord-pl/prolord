@@ -3,8 +3,8 @@
      [plugin/2]
    ).
 
-:- use_module(prolapse(util)).
-:- use_module(prolapse(http_lib), [reply/2, create_reaction/2]).
+:- use_module(prolord(util)).
+:- use_module(prolord(http_lib), [reply/2, create_reaction/2]).
 
 
 plugin(prefix("list_plugins"), help:list_plugins).

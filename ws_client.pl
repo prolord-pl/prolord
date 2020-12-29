@@ -7,8 +7,8 @@
    ).
 :- use_module(library(http/websocket)).
 
-%% :- use_module(prolapse(plugins/raw_plugins)).
-:- use_module(prolapse(util)).
+%% :- use_module(prolord(plugins/raw_plugins)).
+:- use_module(prolord(util)).
 
 
 
@@ -28,8 +28,8 @@ identify_client(WS, Token) :-
     Object = json{ op:2
                  , d: json{ token: Token
                           , properties: json{ '$os': "linux"
-                                            , '$browser': "Prolapse 0.1"
-                                            , '$device':  "Prolapse 0.1" }}},
+                                            , '$browser': "Prolord 0.1"
+                                            , '$device':  "Prolord 0.1" }}},
     ws_send(WS, json(Object)).
 
 ws_loop(WS, Callback) :-
